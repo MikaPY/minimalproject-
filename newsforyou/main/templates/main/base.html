@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+    <aside>
+    <h3>Навигация</h3>
+    <ul>
+        <a href="{% url 'home' %}"><li><i class="fas fa-home"> </i>Главная</li></a>
+        <a href="{% url 'about' %}"><li><i class="fas fa-address-card"> </i>О нас</li></a>
+        <a href=""><li><i class="fas fa-info-circle"> </i>Информация</li></a>
+    </ul>
+
+    </aside>
+    <main>
+    {% block content %}
+    {% endblock %}
+</main>
+</html>
